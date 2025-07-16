@@ -197,7 +197,7 @@ onUnmounted(() => {
   <script setup lang="ts">
   import { computed } from "vue";
   import { useColorMode } from "@vueuse/core";
-  import Sparkles from "./Sparkles.vue";
+  import Sparkles from "./sub_componets/Sparkles.vue";
   
   const particlesColor = computed(() => (useColorMode().value === "dark" ? "#FFFFFF" : "#000000"));
   </script>
