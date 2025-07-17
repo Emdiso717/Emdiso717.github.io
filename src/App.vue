@@ -1,21 +1,21 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
-import HeroSection from './components/HeroSection.vue'
-import AboutSection from './components/AboutSection.vue'
-import blog from './components/blog.vue'
 import Homepage from './components/Homepage.vue'
-
+import AboutSection from './components/AboutSection.vue'
+import Blog from './components/blog.vue';
+import FluidCursor from './components/sub_componets/Fluidcursor.vue';
 </script>
 
 <template>
-  <div>
+  <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <FluidCursor splatRadius="0.1" velocityDissipation="4" densityDissipation="5" />
     <NavBar />
     <Homepage />
-
-    <!-- <HeroSection /> -->
-    <!-- <AboutSection />
-    <blog /> -->
+    <AboutSection />
+    <Blog />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* 可根据需要自定义全局样式 */
+</style>

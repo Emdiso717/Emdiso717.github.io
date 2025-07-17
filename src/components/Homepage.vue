@@ -1,6 +1,6 @@
 <template>
     <section
-        class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden rounded-md bg-white dark:bg-black">
+        class="relative snap-start flex h-screen w-screen flex-col items-center justify-center rounded-md bg-white dark:bg-black">
         <div class="flex text-4xl font-bold">
             <HyperText text="Hey there !~~~~" :duration="1000" :animate-on-load="true" />
             <span style="margin: 8px 8px">👋</span>
@@ -31,6 +31,13 @@
                 class="absolute inset-0 size-full bg-white [mask-image:radial-gradient(600px_400px_at_top,transparent_20%,white)] dark:bg-black">
             </div>
         </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+            <button @click="scrollToAbout" class="animate-bounce focus:outline-none">
+                <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
+            </button>
+        </div>
     </section>
 </template>
 <script setup lang="ts">
@@ -38,10 +45,14 @@ import { computed } from "vue";
 import { useColorMode } from "@vueuse/core";
 import Sparkles from "./sub_componets/Sparkles.vue";
 import HyperText from "./sub_componets/HypterText.vue";
-useColorMode().value = "light"
 const particlesColor = computed(() => (useColorMode().value === "dark" ? "#FFFFFF" : "#000000"));
-console.log(particlesColor.value);
 
+function scrollToAbout() {
+    const about = document.getElementById('about-detail')
+    if (about) {
+        about.scrollIntoView({ behavior: 'smooth' })
+    }
+}
 
 </script>
 

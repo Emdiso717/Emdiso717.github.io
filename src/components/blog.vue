@@ -1,10 +1,9 @@
-
-
 <script setup>
 </script>
 
 <template>
-    <section class="blog-section" id="blog">
+    <section class="h-screen snap-start" id="blog">
+
     </section>
 
 </template>
