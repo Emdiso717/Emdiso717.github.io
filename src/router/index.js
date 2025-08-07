@@ -1,14 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import main from '../components/main.vue'
-import Notebook from '../components/notebook.vue' // 注意路径和文件名大小写
-
+import Notebook from '../components/notebook.vue'
 const routes = [
     { path: '/', component: main },
     { path: '/notebook', component: Notebook },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 })
 

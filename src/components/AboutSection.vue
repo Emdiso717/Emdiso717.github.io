@@ -14,7 +14,7 @@
         </div>
       </CardSpotLight>
       <div class="grid place-content-center p-10 ml-[20%] h-full">
-        <a href="/notebook">
+        <a href="/#/notebook">
           <Book size="sm" :whitecolor=BookColor shadowSize="md" class="cursor-pointer transition hover:scale-105">
             <BookHeader class="mb-[40%]">
               <p class="custom-title">Q-Note</p>
